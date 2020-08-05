@@ -1,17 +1,21 @@
-
 import React, { useState } from "react";
 import "./employeeTable.css";
 
 function EmployeeTable(props) {
+
   const [input, setInput] = useState("");
   const [willSortByAge, setWillSortByAge] = useState(false);
   const storeInput = (e) => {
-
     setInput(e.target.value);
+  };
+  const radioAge = (e) => {
+    setWillSortByAge(e.target.checked);
+    console.log(e.target.checked);
   };
 
   let employees = (props.employees && props.employees.results) ? [...props.employees.results]:[];
   console.log(employees, props.employees.results)
+
   if(willSortByAge){
       employees.sort(function (a,b){return a.dob.age-b.dob.age})
   }

@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
-import EmployeeTable from "./component/EmployeeTable/EmployeeTable"
+import EmployeeTable from "./components/EmployeeTable/EmployeeTable"
 class App extends React.Component {
   constructor(){
     super()
