@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./employeeTable.css";
+import "./EmployeeTable.css";
 
 function EmployeeTable(props) {
 
@@ -19,10 +19,15 @@ function EmployeeTable(props) {
   if(willSortByAge){
       employees.sort(function (a,b){return a.dob.age-b.dob.age})
   }
+  
   return (
     <div>
-      <input onKeyUp={storeInput}></input>
-      <input onChange={radioAge} type="checkbox" name="options" id="option1" /> Age
+      <nav className="navbar navbar-light bg-light">
+        <form className="form-inline">
+          <input className="form-control mr-sm-2 filter" placeholder="Filter by Name" onKeyUp={storeInput} />
+          <input className="form-control mr-sm-2 sort" onChange={radioAge} type="checkbox" name="options" id="option1" /> Sort by Age
+        </form>
+      </nav>
       <div className="row">
         {console.log(props.employees)}
         {employees
@@ -38,8 +43,8 @@ function EmployeeTable(props) {
                     <h5 className="card-title">
                       {item.name.first} {item.name.last}
                     </h5>
-                    <p className="card-text">{item.cell}</p>
-                    <p className="card-text">{item.dob.age}</p>
+                    <p className="card-text">Phone: {item.cell}</p>
+                    <p className="card-text">Age: {item.dob.age}</p>
                     <a href="#" className="btn btn-primary">
                       Go somewhere
                     </a>

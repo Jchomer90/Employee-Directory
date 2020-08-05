@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
-import EmployeeTable from "./components/EmployeeTable/EmployeeTable"
+import EmployeeTable from "./components/EmployeeTable/EmployeeTable.js"
 class App extends React.Component {
   constructor(){
     super()
