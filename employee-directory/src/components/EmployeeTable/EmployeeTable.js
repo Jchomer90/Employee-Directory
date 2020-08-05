@@ -21,13 +21,19 @@ function EmployeeTable(props) {
   }
   
   return (
-    <div>
-      <nav className="navbar navbar-light bg-light">
-        <form className="form-inline">
-          <input className="form-control mr-sm-2 filter" placeholder="Filter by Name" onKeyUp={storeInput} />
-          <input className="form-control mr-sm-2 sort" onChange={radioAge} type="checkbox" name="options" id="option1" /> Sort by Age
-        </form>
-      </nav>
+    <div className="container container-fluid">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+        <h1 class="display-4">Your Company</h1>
+        <nav className="navbar navbar-light bg-light">
+        <a class="navbar-brand">Employee Directory</a>
+          <form className="form-inline">
+            <input className="form-control mr-sm-2" placeholder="Filter by Name" onKeyUp={storeInput} />
+            <input className="form-control mr-sm-2" onChange={radioAge} type="checkbox" name="options" id="option1" /> Sort by Age
+          </form>
+        </nav>
+        </div>
+      </div>
       <div className="row">
         {console.log(props.employees)}
         {employees
@@ -37,17 +43,15 @@ function EmployeeTable(props) {
             })
             .map((item) => {
               return (
-                <div className="card employeeCard">
+                <div className="card border-dark mb-3 employeeCard">
                   <div className="card-body">
-                  <img src={item.picture.large} class="card-img-top" alt="..." />
+                  <img src={item.picture.large} className="card-img-top image" alt="..." />
                     <h5 className="card-title">
                       {item.name.first} {item.name.last}
                     </h5>
                     <p className="card-text">Phone: {item.cell}</p>
+                    <p className="card-text"><a href={item.email}>{item.email}</a></p>
                     <p className="card-text">Age: {item.dob.age}</p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
                   </div>
                 </div>
               );
