@@ -8,7 +8,7 @@ function EmployeeTable(props) {
   const storeInput = (e) => {
     setInput(e.target.value);
   };
-  const radioAge = (e) => {
+  const employeeAge = (e) => {
     setWillSortByAge(e.target.checked);
     console.log(e.target.checked);
   };
@@ -25,11 +25,11 @@ function EmployeeTable(props) {
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
         <h1 class="display-4">Your Company</h1>
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-light bg-light border border-dark">
         <a class="navbar-brand">Employee Directory</a>
           <form className="form-inline">
             <input className="form-control mr-sm-2" placeholder="Filter by Name" onKeyUp={storeInput} />
-            <input className="form-control mr-sm-2" onChange={radioAge} type="checkbox" name="options" id="option1" /> Sort by Age
+            <input className="form-control mr-sm-2" onChange={employeeAge} type="checkbox" name="options" id="option1" /> Sort by Age
           </form>
         </nav>
         </div>

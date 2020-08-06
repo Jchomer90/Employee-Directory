@@ -1,12 +1,16 @@
 .employeeCard {
-    width: 24%;
+    /* width: 24%; */
+    min-width: 24%;
+    max-width: 250px;
     margin: 5px;
     border-width: 2px;
 }
 
 .image {
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    width: 120%;
+    max-width: 200px;
 }
 
 .jumbotron {
@@ -18,15 +22,11 @@ body {
 }
 
 .jumbotron {
-    width: 135%;
-    margin-left: -17%;
+    width: 180%;
+    margin-left: -40%;
 }
 
 .row {
     width: 110%;
     margin-left: -5%;
-}
-
-.navbar {
-    border-width: 2px;
 }

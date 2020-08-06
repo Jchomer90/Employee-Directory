@@ -39,7 +39,7 @@
 
   [Joshua Homer](https://github.com/Jchomer90)
 
-### Update you budget with any transaction made, if made offline the total will update once online
+### Filter by name or sort by age!
 <img src="./employee-directory/public/images/screenShot1.jpeg" alt="Home Screen" width="700">
 
 <img src="./employee-directory/public/images/screenShot2.jpeg" alt="Add Workout" width="700">
@@ -55,4 +55,3 @@
   ## Questions
   If you have any questions about the repository, open an issue or contact me directly at Joshuachomer@gmail.com.
    You can also find more of my work on [Github](www.github.com/Jchomer90)
-  # Budget-Tracker
