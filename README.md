@@ -29,7 +29,7 @@
 
   ## Usage
   
-  [Deployed Link]()
+  [Deployed Link](https://jchomer90.github.io/Employee-Directory/)
 
   ## License
 
